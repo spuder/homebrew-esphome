@@ -24,6 +24,9 @@ jobs:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+        
+      - name: Install ESPHome
+        run: brew install esphome
 
       - name: Bump formulae
         uses: Homebrew/actions/bump-formulae@master
