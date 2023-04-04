@@ -25,6 +25,9 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         
+      - name: Tap homebrew/core
+        run: brew tap homebrew/core
+        
       - name: Install ESPHome
         run: brew install esphome
 
