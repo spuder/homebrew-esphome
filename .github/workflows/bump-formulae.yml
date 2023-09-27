@@ -11,19 +11,19 @@ jobs:
 
     steps:
       - name: Configure git
-        uses: Homebrew/actions/git-user-config@master
+        uses: Homebrew/actions/git-user-config@c43c466dcf8d9713ccd8ce26f316a7f6c4d6d1dc
         with:
           username: bobsoppe
 
       - name: Set up GPG commit signing
         id: set-up-commit-signing
-        uses: Homebrew/actions/setup-commit-signing@master
+        uses: Homebrew/actions/setup-commit-signing@c43c466dcf8d9713ccd8ce26f316a7f6c4d6d1dc
         with:
           signing_key: ${{ secrets.GPG_SIGNING_KEY }}
 
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@c43c466dcf8d9713ccd8ce26f316a7f6c4d6d1dc
         
       - name: Tap homebrew/core
         run: brew tap homebrew/core
@@ -32,7 +32,7 @@ jobs:
         run: brew install esphome
 
       - name: Bump formulae
-        uses: Homebrew/actions/bump-formulae@master
+        uses: Homebrew/actions/bump-formulae@c43c466dcf8d9713ccd8ce26f316a7f6c4d6d1dc
         with:
           token: ${{secrets.TOKEN}}
           formulae: esphome
