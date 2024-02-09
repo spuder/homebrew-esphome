@@ -27,7 +27,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@c43c466dcf8d9713ccd8ce26f316a7f6c4d6d1dc
         
       - name: Tap homebrew/core
-        run: brew tap homebrew/core
+        run: brew tap --force homebrew/core
         
       - name: Install ESPHome
         run: brew install esphome
